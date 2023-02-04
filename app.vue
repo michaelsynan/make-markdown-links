@@ -8,10 +8,10 @@
 </template>
 
 <script setup>
-const links = '';
-const markdown = '';
-import { ref } from 'vue';
-const message = ref('');
+  const links = '';
+  const markdown = '';
+  import { ref } from 'vue';
+  const message = ref('');
 </script>
 
 <style scoped>
