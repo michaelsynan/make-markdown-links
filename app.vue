@@ -1,9 +1,8 @@
 <template>
   <div class="bg-slate-900 min-h-full h-screen text-slate-100">
     <theHeader />
-    <div>
+    <div class="p-2">
       <label class="text-lg" for="theMessage">Paste your links</label>
-      <br />
       <textarea
         v-model="message"
         placeholder="add multiple lines"
