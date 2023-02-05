@@ -12,6 +12,10 @@ p {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+label {
+  font-weight: bold;
+}
+
 input,
 textarea {
   width: 100%;
