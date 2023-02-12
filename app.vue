@@ -2,7 +2,6 @@
   <div class="bg-slate-900 min-h-full h-screen text-slate-100 p-4">
     <div class="max-w-2xl mx-auto">
       <theHeader />
-      <div class="text-xl py-4">This is a description of the app.</div>
       <projectInfo />
       <div>
         <label class="" for="theMessage">Paste your links</label>
