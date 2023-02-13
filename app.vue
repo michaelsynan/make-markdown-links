@@ -2,14 +2,13 @@
   <div class="bg-slate-900 min-h-full h-screen text-slate-100">
     <div class="">
       <theHeader />
-      <div class="p-4 max-w-2xl mx-auto
-      ">
+      <div class="p-4 max-w-2xl mx-auto">
         <projectInfo />
         <div>
-          <label class="" for="theMessage">Paste your links</label>
+          <label class="hidden" for="theMessage">Paste your links</label>
           <textarea
             v-model="message"
-            placeholder="add multiple lines"
+            placeholder="Paste links here"
             class="
               w-full
               bg-stone-700
@@ -30,6 +29,7 @@
               v-model="bulletpoints"
               @onclick="bulletpoints != bulletpoints"
               class="
+                shadow-sm
                 w-4
                 h-4
                 text-blue-600
@@ -42,7 +42,9 @@
                 dark:bg-gray-700 dark:border-gray-600
               "
             />
-            <label for="default-checkbox" class="ml-2 text-sm font-medium"
+            <label
+              for="default-checkbox"
+              class="ml-2 text-sm font-medium text-stone-300"
               >Bullet points</label
             >
           </div>
