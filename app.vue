@@ -1,58 +1,64 @@
 <template>
-  <div class="bg-slate-900 min-h-full h-screen text-slate-100 p-4">
-    <div class="max-w-2xl mx-auto">
+  <div class="bg-slate-900 min-h-full h-screen text-slate-100">
+    <div class="">
       <theHeader />
-      <projectInfo />
-      <div>
-        <label class="" for="theMessage">Paste your links</label>
-        <textarea
-          v-model="message"
-          placeholder="add multiple lines"
-          class="
-            w-full
-            bg-stone-700
-            focus:border-solid focus:border-2 focus:border-teal-400 focus:ring-0
-            outline-none
-          "
-          name="theMessage"
-        >
-        </textarea>
-        <div class="flex items-center mb-4">
-          <input
-            id="default-checkbox"
-            type="checkbox"
-            value=""
-            v-model="bulletpoints"
-            @onclick="bulletpoints != bulletpoints"
+      <div class="p-4 max-w-2xl mx-auto
+      ">
+        <projectInfo />
+        <div>
+          <label class="" for="theMessage">Paste your links</label>
+          <textarea
+            v-model="message"
+            placeholder="add multiple lines"
             class="
-              w-4
-              h-4
-              text-blue-600
-              bg-gray-100
-              border-gray-300
-              rounded
-              focus:ring-blue-500
-              dark:focus:ring-blue-600 dark:ring-offset-gray-800
-              focus:ring-2
-              dark:bg-gray-700 dark:border-gray-600
+              w-full
+              bg-stone-700
+              focus:border-solid
+              focus:border-2
+              focus:border-teal-400
+              focus:ring-0
+              outline-none
             "
-          />
-          <label for="default-checkbox" class="ml-2 text-sm font-medium"
-            >Bullet points</label
+            name="theMessage"
           >
-        </div>
-        <div
-          v-if="message"
-          v-for="word in message.split('\n')"
-          style="white-space: pre-line"
-        >
-          <span v-if="bulletpoints">- </span>
-          <span class="text-stone-500">[</span>
-          {{ word.replace(/(^\w+:|^)\/\//, '') }}
-          <span class="text-stone-500">]</span>
-          <span class="text-stone-500">(</span>
-          {{ word }}
-          <span class="text-stone-500">)</span>
+          </textarea>
+          <div class="flex items-center mb-4">
+            <input
+              id="default-checkbox"
+              type="checkbox"
+              value=""
+              v-model="bulletpoints"
+              @onclick="bulletpoints != bulletpoints"
+              class="
+                w-4
+                h-4
+                text-blue-600
+                bg-gray-100
+                border-gray-300
+                rounded
+                focus:ring-blue-500
+                dark:focus:ring-blue-600 dark:ring-offset-gray-800
+                focus:ring-2
+                dark:bg-gray-700 dark:border-gray-600
+              "
+            />
+            <label for="default-checkbox" class="ml-2 text-sm font-medium"
+              >Bullet points</label
+            >
+          </div>
+          <div
+            v-if="message"
+            v-for="word in message.split('\n')"
+            style="white-space: pre-line"
+          >
+            <span v-if="bulletpoints">- </span>
+            <span class="text-stone-500">[</span>
+            {{ word.replace(/(^\w+:|^)\/\//, '') }}
+            <span class="text-stone-500">]</span>
+            <span class="text-stone-500">(</span>
+            {{ word }}
+            <span class="text-stone-500">)</span>
+          </div>
         </div>
       </div>
     </div>
